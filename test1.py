@@ -7,6 +7,9 @@ data = json.load(open("data.json", "r"))
 def translate(word):
     if word in data:
         return data[word]
+        word = word.upper()
+    elif word in data:
+        return data[word]
         word = word.lower()
     elif word in data:
         return data[word]
